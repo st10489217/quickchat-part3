@@ -47,7 +47,7 @@ public class TestUnit {
     @org.junit.Test
     public void testRegisterUser() {
         String result = Login.registerUser("Yasmine", "kgl_1", "Ch&&sec@ke99!", "+27838968976", "Mfene");
-        System.out.println("RESULT: " + result);
+        System.out.println("RESULT: " + );
         Assert.assertEquals(true, result.contains("Welcome"));
     }
     
