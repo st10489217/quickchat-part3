@@ -12,12 +12,12 @@ public class TestUnit {
    // ========== USERNAME TESTS ==========
     @org.junit.Test
     public void testCheckUserNameCorrect() {
-        Assert.assertEquals(true, Login.checkUserName("kyl_1"));
+        Assert.assertEquals(true, Login.checkUserName("kgl_1"));
     }
     
     @org.junit.Test
     public void testCheckUserNameIncorrect() {
-        Assert.assertEquals(false, Login.checkUserName("kyle!!!!!"));
+        Assert.assertEquals(false, Login.checkUserName("kgutso!!!!!"));
     }
     
     // ========== PASSWORD TESTS ==========
@@ -46,27 +46,28 @@ public class TestUnit {
 
     @org.junit.Test
     public void testRegisterUser() {
-        String result = Login.registerUser("Yasmine", "kyl_1", "Ch&&sec@ke99!", "+27838968976", "Phiri");
+        String result = Login.registerUser("Yasmine", "kgl_1", "Ch&&sec@ke99!", "+27838968976", "Mfene");
+        System.out.println("RESULT: " + result);
         Assert.assertEquals(true, result.contains("Welcome"));
     }
     
     // ========== LOGIN TESTS ==========
     @org.junit.Test
     public void testLoginUserCorrect() {
-        Login.registerUser("Yasmine", "kyl_1", "Ch&&sec@ke99!", "+27838968976", "Phiri");
-        Assert.assertEquals(true, Login.loginUser("kyl_1", "Ch&&sec@ke99!"));
+        Login.registerUser("Yasmine", "kgl_1", "Ch&&sec@ke99!", "+27838968976", "Mfene");
+        Assert.assertEquals(true, Login.loginUser("kgl_1", "Ch&&sec@ke99!"));
     }
     
     @org.junit.Test
     public void testLoginUserIncorrect() {
-        Login.registerUser("Yasmine", "kyl_1", "Ch&&sec@ke99!", "+27838968976", "Phiri");
+        Login.registerUser("Yasmine", "kgl_1", "Ch&&sec@ke99!", "+27838968976", "Mfene");
         Assert.assertEquals(false, Login.loginUser("wrong", "wrong"));
     }
     
     // ========== LOGIN STATUS TESTS ==========
     @org.junit.Test
     public void testReturnLoginStatusSuccess() {
-        Login.registerUser("Yasmine", "kyl_1", "Ch&&sec@ke99!", "+27838968976", "Phiri");
+        Login.registerUser("Yasmine", "kgl_1", "Ch&&sec@ke99!", "+27838968976", "Mfene");
         String result = Login.returnLoginStatus(true);
         Assert.assertEquals(true, result.contains("Welcome"));
     }
