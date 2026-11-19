@@ -46,15 +46,14 @@ public class TestUnit {
 
     @org.junit.Test
     public void testRegisterUser() {
-        String result = Login.registerUser("Yasmine", "kgl_1", "Ch&&sec@ke99!", "+27838968976", "Mfene");
-        System.out.println("RESULT: " + );
+        String result = Login.registerUser("Yasmine", "Mfene","kgl_1", "Ch&&sec@ke99!", "+27838968976" );
         Assert.assertEquals(true, result.contains("Welcome"));
     }
     
     // ========== LOGIN TESTS ==========
     @org.junit.Test
     public void testLoginUserCorrect() {
-        Login.registerUser("Yasmine", "kgl_1", "Ch&&sec@ke99!", "+27838968976", "Mfene");
+        Login.registerUser("Yasmine","Mfene", "kgl_1", "Ch&&sec@ke99!", "+27838968976" );
         Assert.assertEquals(true, Login.loginUser("kgl_1", "Ch&&sec@ke99!"));
     }
     
